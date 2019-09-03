@@ -7,6 +7,9 @@ variable "AWS_REGION" {
 variable "SUBNET_ID" {
   default = "subnet-07a8f6fef09c1d4e0"
 }
+#variable "ROLE_NAME" {
+#  default = "EC2Admin"
+#}
 variable "SECURITY_GROUP_ID1" {
   default = "sg-0fe15e0fba50c3d84"
 }
