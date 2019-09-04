@@ -1,7 +1,11 @@
+resource aws_key_pair" "prep-key"{
+key_name = "prep-key"
+public_key = ""
+}
 resource "aws_instance" "example" {
   ami           = "${lookup(var.AMIS, var.AWS_REGION)}"
   instance_type = "t2.xlarge"
-  key_name = "${var.KEY_NAME}"
+  key_name = "${aws_key_pair.prep-key.key_name}"
   tags = {
     Name = "preparatoryDemoWebServer"
   }
