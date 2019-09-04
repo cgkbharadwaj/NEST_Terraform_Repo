@@ -4,7 +4,7 @@ resource "aws_instance" "example" {
   key_name = "${var.KEY_NAME}"
   "terraformworkload.pem"
   tags = {
-    Name = "testTag"
+    Name = "preparatoryDemoWebServer"
   }
   # the VPC subnet
 subnet_id = "${var.SUBNET_ID}"
